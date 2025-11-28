@@ -494,7 +494,7 @@ const Widget: React.FC<{ widgetId: string }> = ({ widgetId }) => {
     }
  
     // NO TOKEN — PUBLIC ACCESS
-    fetch(`https://esign-admin.signmary.com/api/widgets/widget-data/public/${widgetId}`)
+    fetch(`https://esign-admin.signmary.com/api/widgets/widget-data/public/untitled-pricing-table-4/`)
       .then(res => {
         if (!res.ok) throw new Error("Widget not found");
         return res.json();

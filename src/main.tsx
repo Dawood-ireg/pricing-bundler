@@ -8,8 +8,8 @@ const mountWidgets = () => {
   if (isMounted) return; // ← PREVENT INFINITE LOOP
   isMounted = true;
 
-  document.querySelectorAll('[widgetId]').forEach(container => {
-    const widgetId = container.getAttribute('widgetId');
+  document.querySelectorAll('[data-widget-id]').forEach(container => {
+    const widgetId = container.getAttribute('data-widget-id');
     if (!widgetId || widgetId === "undefined") return;
 
     const root = ReactDOM.createRoot(container);
